@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	@apply h-full;
+}
+
+body {
+	@apply font-light font-Unbounded text-main;
+}
+
+@layer components {
+	.custom-button {
+		@apply flex items-center justify-center px-5 py-3 h-11  rounded-3xl;
+	}
+
+	.custom-hover {
+		@apply hover:bg-main/90 md:hover:bg-white/90;
+	}
+
+	.custom-hover-inverse {
+		@apply hover:bg-main/10 md:hover:bg-white/10;
+	}
+
+	.content-arrow {
+		@apply after:content-[url('public/icon-arrow.svg')] md:after:content-[url('public/icon-arrow-gray.svg')] after:relative after:top-1 after:ml-2;
+	}
+}
